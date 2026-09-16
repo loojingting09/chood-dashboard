@@ -1,40 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export function CountUp({ value, dur = 1200, className }) {
-  const str = String(value);
-  const m = str.match(/-?[\d,]+\.?\d*/);
-  const [val, setVal] = useState(0);
-  const started = useRef(false);
-  const target = m ? parseFloat(m[0].replace(/,/g, "")) : 0;
-  useEffect(() => {
-    if (!m || started.current) return;
-    started.current = true;
-    let raf, start;
-    const step = (t) => {
-      if (!start) start = t;
-      const p = Math.min((t - start) / dur, 1);
-      const e = 1 - Math.pow(1 - p, 3);
-      setVal(target * e);
-      if (p < 1) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, dur, m]);
-  if (!m) return <span className={className}>{str}</span>;
-  const numStr = m[0].replace(/,/g, "");
-  const decimals = (numStr.split(".")[1] || "").length;
-  const prefix = str.slice(0, m.index);
-  const suffix = str.slice(m.index + m[0].length);
-  const shown =
-    target >= 1000 ? Math.round(val).toLocaleString("en-US") : val.toFixed(decimals);
-  return (
-    <span className={className}>
-      {prefix}
-      {shown}
-      {suffix}
-    </span>
-  );
+// Numbers render their exact final value immediately — never an animated
+// partial value — so every figure is always correct at a glance and in
+// screenshots. (The "high-tech" motion lives in Reveal, hover lifts, the
+// animated gradient banner and the live dots, not in the numbers.)
+export function CountUp({ value, className }) {
+  return <span className={className}>{String(value)}</span>;
 }
 
 // Reveal on scroll: adds .in when the element enters the viewport

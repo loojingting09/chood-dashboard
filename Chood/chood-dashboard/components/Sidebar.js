@@ -2,17 +2,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const items = [
-  { href: "/", label: "Home", icon: "◇" },
-  { href: "/xhs", label: "Xiaohongshu (XHS)", dot: true },
+const TOP = [{ href: "/", label: "Home", icon: "◇" }];
+
+const XHS_CHILDREN = [
+  { href: "/xhs", label: "账号概览", en: "Overview", exact: true },
+  { href: "/xhs/fans", label: "粉丝数据", en: "Fans" },
+  { href: "/xhs/posts", label: "笔记表现", en: "Posts" },
+];
+
+const AFTER = [
   { href: "/xhs/insights", label: "AI Insights", icon: "✦" },
   { href: "/xhs/admin", label: "Data Manager", icon: "⬆" },
 ];
 
 export default function Sidebar() {
   const path = usePathname();
-  const isActive = (href) =>
-    href === "/" ? path === "/" : path === href || path.startsWith(href + "/");
+  const isActive = (href, exact) =>
+    exact || href === "/"
+      ? path === href
+      : path === href || path.startsWith(href + "/");
+  const inXhsData = XHS_CHILDREN.some((c) =>
+    c.exact ? path === c.href : path === c.href || path.startsWith(c.href + "/")
+  ) || /^\/xhs\/[^/]+$/.test(path); // post detail pages
+
   return (
     <aside className="sidebar">
       <div className="brandmark">
@@ -24,9 +36,35 @@ export default function Sidebar() {
       </div>
       <div className="nav-label">Workspace</div>
       <nav className="nav">
-        {items.map((it) => (
+        {TOP.map((it) => (
           <Link key={it.href} href={it.href} className={isActive(it.href) ? "active" : ""}>
-            {it.dot ? <span className="dot" /> : <span>{it.icon}</span>}
+            <span>{it.icon}</span>
+            {it.label}
+          </Link>
+        ))}
+
+        {/* Xiaohongshu group — the raw data dashboards */}
+        <div className={`nav-group ${inXhsData ? "open" : ""}`}>
+          <div className="nav-group-head">
+            <span className="dot" /> Xiaohongshu (XHS)
+          </div>
+          <div className="nav-children">
+            {XHS_CHILDREN.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className={isActive(c.href, c.exact) ? "active" : ""}
+              >
+                <span className="cn">{c.label}</span>
+                <span className="en">{c.en}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {AFTER.map((it) => (
+          <Link key={it.href} href={it.href} className={isActive(it.href) ? "active" : ""}>
+            <span>{it.icon}</span>
             {it.label}
           </Link>
         ))}

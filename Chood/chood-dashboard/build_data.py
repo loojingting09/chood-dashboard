@@ -84,7 +84,7 @@ posts.append({
 posts.append({
  "id":"source-difference",
  "title":"蛋白粉别只看几克，来源真的有差",
- "publishDate":"2026-08-31","type":"图文","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-08-31","type":"图文","status":"笔记状态正常","cover":"/covers/source-difference.jpg",
  "dataAsOf":"09-15 00:00",
  "headline":{"views":164,"likes":4,"comments":1},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"note",
@@ -121,7 +121,7 @@ posts.append({
 posts.append({
  "id":"why-chood",
  "title":"蛋白粉这么多，为什么还做Chood？",
- "publishDate":"2026-08-29","type":"视频","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-08-29","type":"视频","status":"笔记状态正常","cover":"/covers/why-chood.jpg",
  "dataAsOf":"09-13 00:00",
  "headline":{"views":237,"likes":9,"comments":3},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"video",
@@ -157,7 +157,7 @@ posts.append({
 posts.append({
  "id":"sleep-30",
  "title":"有了这个，我早上真的敢多睡30分钟 😴",
- "publishDate":"2026-09-05","type":"视频","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-09-05","type":"视频","status":"笔记状态正常","cover":"/covers/sleep-30.jpg",
  "dataAsOf":"09-16 00:00",
  "headline":{"views":205,"likes":5,"comments":4},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"video",
@@ -193,7 +193,7 @@ posts.append({
 posts.append({
  "id":"week-2",
  "title":"小品牌上小红书第2周：开始没东西发了",
- "publishDate":"2026-09-07","type":"视频","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-09-07","type":"视频","status":"笔记状态正常","cover":"/covers/week-2.jpg",
  "dataAsOf":"09-16 00:00",
  "headline":{"views":181,"likes":11,"comments":0},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"video",

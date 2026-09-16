@@ -27,6 +27,18 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}[hidden]{d
 .nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;color:rgba(250,242,229,.82);font-weight:500;margin:2px 0}
 .nav a:hover{background:rgba(255,255,255,.1);color:#fff}.nav a.active{background:rgba(255,255,255,.17);color:#fff}
 .nav a .dot{width:7px;height:7px;border-radius:50%;background:#E8DDD0}
+.nav-group{margin:2px 0}
+.nav-group-head{display:flex;align-items:center;gap:10px;padding:10px 12px;color:rgba(250,242,229,.82);font-weight:600;font-size:14px}
+.nav-group-head .dot{width:7px;height:7px;border-radius:50%;background:#E8DDD0}
+.nav-children{display:flex;flex-direction:column;margin:2px 0 4px;padding-left:14px;border-left:1px solid rgba(250,242,229,.16);margin-left:15px}
+.nav-children a{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:7px 12px;border-radius:9px;margin:1px 0;color:rgba(250,242,229,.72);font-weight:500;font-size:13.5px}
+.nav-children a .en{font-size:11px;color:rgba(250,242,229,.42);font-weight:500}
+.nav-children a.active{background:rgba(255,255,255,.17);color:#fff}.nav-children a.active .en{color:rgba(250,242,229,.7)}
+.crumb{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--xhs);font-weight:700;margin-bottom:6px}
+.nextlinks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.nextlink{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:13px;background:#fff;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.nextlink:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(152,50,26,.09);border-color:rgba(152,50,26,.35)}
+.nextlink .nl-k{font-weight:700;font-size:14.5px;color:var(--chood)}.nextlink .nl-s{font-size:12.5px;color:var(--muted);margin-top:3px}
 .sidebar-foot{margin-top:auto;font-size:11px;color:rgba(250,242,229,.55);padding:14px 10px 2px;border-top:1px solid rgba(250,242,229,.18);line-height:1.6}
 .page-head{margin-bottom:22px}.page-head h1{font-size:24px;font-weight:750;margin:0 0 4px}.page-head .meta{color:var(--muted);font-size:13px}
 .section-title{display:flex;align-items:baseline;gap:10px;margin:30px 0 14px}.section-title h2{font-size:17px;font-weight:700;margin:0}.section-title .hint{font-size:12px;color:var(--muted)}
