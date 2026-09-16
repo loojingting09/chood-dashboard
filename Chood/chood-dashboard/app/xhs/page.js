@@ -21,6 +21,11 @@ export default function XhsAccountOverview() {
         <div className="meta">{account.handle} · {account.overview.period}</div>
       </div>
 
+      <div className="snap-note">
+        <span className="snap-pill">数据快照 · 截至 2026-09-14</span>
+        「近7日 / 近30日」是小红书的<b>滚动窗口</b>，每天都会重新计算，因此这里的账号数值是<b>截图当天</b>的快照，与 App 里此刻的实时数字会有正常差异。需要更新时，把最新的「账号概览 / 粉丝数据」截图发我即可。（每篇笔记的数据为发布后固定值，不受此影响。）
+      </div>
+
       {/* -------- AI Insights teaser -------- */}
       <Link href="/xhs/insights" style={{ display: "block" }}>
         <AiInsights data={insights} compact />

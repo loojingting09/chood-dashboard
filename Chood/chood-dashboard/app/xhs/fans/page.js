@@ -13,6 +13,11 @@ export default function XhsFans() {
         <div className="meta">{account.handle} · {account.fans.period}</div>
       </div>
 
+      <div className="snap-note">
+        <span className="snap-pill">数据快照 · 截至 2026-09-14 · 近30日</span>
+        新增 / 流失粉丝为<b>近30日滚动窗口</b>数值（每日刷新）。若在 App 切换到「近7日」，数字会明显更小——这是不同统计周期，并非错误。需要更新时，发我最新的粉丝数据截图即可。
+      </div>
+
       <div className="grid cols-6">
         <Kpi label="总粉丝" value={fmt(account.fans.base.total)} hl />
         <Kpi label="新增粉丝" value={fmt(account.fans.base.new)} />
