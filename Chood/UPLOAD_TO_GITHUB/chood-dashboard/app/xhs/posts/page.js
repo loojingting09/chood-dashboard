@@ -71,7 +71,7 @@ export default function XhsPosts() {
         <Link href="/xhs/insights" className="nextlink">
           <div>
             <div className="nl-k">AI Insights →</div>
-            <div className="nl-s">跨 6 篇笔记的智能分析与建议</div>
+            <div className="nl-s">跨 {posts.length} 篇笔记的智能分析与建议</div>
           </div>
         </Link>
       </div>
