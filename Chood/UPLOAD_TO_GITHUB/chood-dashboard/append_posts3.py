@@ -28,7 +28,7 @@ NEW=[]
 NEW.append({
  "id":"protein-19-versions",
  "title":"为了一杯敢给大家喝的蛋白饮，做废了19版",
- "publishDate":"2026-09-21","type":"视频","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-09-21","type":"视频","status":"笔记状态正常","cover":"/covers/protein-19-versions.jpg",
  "dataAsOf":"10-02 00:00",
  "headline":{"views":280,"likes":7,"comments":5},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"note",
@@ -63,7 +63,7 @@ NEW.append({
 NEW.append({
  "id":"anniversary-giveaway",
  "title":"1岁生日不收礼，这次换我们送你们 🎂🎁",
- "publishDate":"2026-09-20","type":"图文","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-09-20","type":"图文","status":"笔记状态正常","cover":"/covers/anniversary-giveaway.jpg",
  "dataAsOf":"10-02 00:00",
  "headline":{"views":1283,"likes":78,"comments":120},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"note",
@@ -100,7 +100,7 @@ NEW.append({
 NEW.append({
  "id":"one-year-reflection",
  "title":"这一年，CHOOD 最珍贵的，不是卖出了多少盒",
- "publishDate":"2026-09-26","type":"视频","status":"笔记状态正常","cover":None,
+ "publishDate":"2026-09-26","type":"视频","status":"笔记状态正常","cover":"/covers/one-year-reflection.jpg",
  "dataAsOf":"10-02 00:00",
  "headline":{"views":143,"likes":5,"comments":1},
  "diagnosis":{"window":"诊断统计笔记发布后14天内数据","style":"note",
